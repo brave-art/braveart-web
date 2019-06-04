@@ -1,6 +1,8 @@
 import React from 'react';
 
-import crossedAxeIcon from "../../img/braveart/crossedLumberjackAxes/crossed-lumberjack-axes-icon-cut.jpg";
+import crossedAxeIcon from "../../img/braveart/crossedLumberjackAxes/crossed-lumberjack-axes-icon-cut.png";
+import puzzleIcon from "../../img/braveart/puzzle Icon/puzzle-icon.svg";
+import questionMarkIcon from "../../img/braveart/puzzle Icon/question-mark-icon.svg";
 // import darkIcon4 from "../../img/icon/dark/4.png";
 import darkIcon5 from "../../img/icon/dark/5.png";
 import darkIcon6 from "../../img/icon/dark/6.png";
@@ -14,25 +16,25 @@ const ServicesSection = (props) => (
             </div>
             <div className="row">
                 <Service
-                    title = "Skyscraper Buildings"
-                    description = "Some Info on Sky Scrapers"
+                    title = "Axe Throwing"
+                    description = "Information on axe throwing leagues, rentals and events"
                     image = {crossedAxeIcon}
-                    imageAlt = "pic of project"
-                    link = "#"
+                    imageAlt = "Crossed Axes"
+                    link = "#/axe-throwing"
                 />
                 <Service
-                    title = "Documentation"
-                    description = "Some info on Documentation"
-                    image = {darkIcon5}
-                    imageAlt = "pic of project"
-                    link = "#"
+                    title = "Escape Rooms"
+                    description = "Coming Soon!"
+                    image = {puzzleIcon}
+                    imageAlt = "Puzzle Icon."
+                    link = "#/escape-room"
                 />
                 <Service
-                    title = "Restauration Projects"
-                    description = "Some info on Restaurants project"
-                    image = {darkIcon6}
-                    imageAlt = "pic of project"
-                    link = "#"
+                    title = "More?"
+                    description = "Brave Art will be offering two new services in the near future. Follow us on social media or subscribe to our mailing list to be the first ot know!"
+                    image = {questionMarkIcon}
+                    imageAlt = "Question mark icon."
+                    link = "#/news"
                 />
             </div>
         </div>

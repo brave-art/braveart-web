@@ -15,7 +15,7 @@ import './css/style.css';
 
 import HomeTab from "./component/home/HomeTab";
 import AboutTab from "./component/about/AboutTab";
-import ServicesTab from "./component/service/ServicesTab";
+import AxeThrowingTab from "./component/service/AxeThrowingTab";
 
 import logo from "./img/logo.png";
 import ContactTab from "./component/contact/ContactTab";
@@ -41,7 +41,7 @@ function App() {
                   <ul>
                       <li><NavLink to="/">Home</NavLink></li>
                       <li><NavLink to="/about">About us</NavLink></li>
-                      <li><NavLink to="/service">Services</NavLink></li>
+                      <li><NavLink to="/axe-throwing">Axe Throwing</NavLink></li>
                       {/*<li><NavLink to="/portfolio">Portfolio</NavLink></li>*/}
                       <li><NavLink to="/contact">Contact</NavLink></li>
                   </ul>
@@ -51,7 +51,7 @@ function App() {
 
           <Route exact path="/" component={HomeTab}/>
           <Route path="/about" component={AboutTab}/>
-          <Route path="/service" component={ServicesTab}/>
+          <Route path="/axe-throwing" component={AxeThrowingTab}/>
           <Route path="/contact" component={ContactTab}/>
       </HashRouter>
   );

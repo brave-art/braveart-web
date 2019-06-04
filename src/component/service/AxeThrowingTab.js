@@ -8,12 +8,12 @@ import ServicesIntroSection from "./ServiceIntroSection";
 import ServicesWalkthroughSection from "./ServicesWalkthroughSection";
 import PromoSection from "./PromoSection";
 
-const ServicesTab = () => (
+const AxeThrowingTab = () => (
 
     <div className="servicesTab">
 
         <Header
-            screenTitle={"Services"}
+            screenTitle={"Axe Throwing"}
             bgImage={HeaderImage}
         />
         <ServicesIntroSection/>
@@ -25,4 +25,4 @@ const ServicesTab = () => (
     </div>
 );
 
-export default ServicesTab;
+export default AxeThrowingTab;
