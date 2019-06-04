@@ -17,7 +17,7 @@ import './css/style.css';
 
 import HomeTab from "./component/home/HomeTab";
 import AboutTab from "./component/about/AboutTab";
-import AxeThrowingTab from "./component/service/AxeThrowingTab";
+import AxeThrowingTab from "./component/axe-throwing/AxeThrowingTab";
 
 import logo from "./img/logo.png";
 import ContactTab from "./component/contact/ContactTab";
@@ -34,14 +34,15 @@ function App() {
                   <Navbar.Brand href={"#"}>Brave Art Adventures</Navbar.Brand>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                   <Navbar.Collapse id="responsive-navbar-nav">
-                      <Nav className={"mr-auto"} float={"right"}>
-                          <Nav.Link><NavLink to="/">Home</NavLink></Nav.Link>
-                          <Nav.Link><NavLink to="/about">About us</NavLink></Nav.Link>
-                          <NavDropdown title="Services" id="collasible-nav-dropdown">
-                              <NavDropdown.Item><NavLink to="/axe-throwing">Axe Throwing</NavLink></NavDropdown.Item>
+                      <Nav className={"mr-auto"}>
+                          <Nav.Link><NavLink to="/axe-throwing">Axe Throwing</NavLink></Nav.Link>
+                          <NavDropdown title="Other Experiences" id="collasible-nav-dropdown">
+                              {/*<NavDropdown.Item><NavLink to="/axe-throwing">Axe Throwing</NavLink></NavDropdown.Item>*/}
                               <NavDropdown.Item><NavLink to="/escape-rooms">Escape Rooms</NavLink></NavDropdown.Item>
                               <NavDropdown.Divider />
+                              <NavDropdown.Item><NavLink to="/upcoming">Upcoming Offerings</NavLink></NavDropdown.Item>
                           </NavDropdown>
+                          <Nav.Link><NavLink to="/about">About us</NavLink></Nav.Link>
                           <Nav.Link><NavLink to="/contact">Contact</NavLink></Nav.Link>
                       </Nav>
                   </Navbar.Collapse>

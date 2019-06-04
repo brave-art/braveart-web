@@ -4,7 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import SocialLinks from '../common/SocialLinks';
 
-import bg from "../../img/bg.jpg";
+import caveSpotlightImg from "../../img/braveart/adventure/cave-spotlight-adventure-shrunk.jpg";
+import bg2 from "../../img/bg.jpg";
 
 const HeroSection = () => (
     <section className="hero-section">
@@ -16,20 +17,20 @@ const HeroSection = () => (
         <Carousel className="hero-slider">
             <Carousel.Item>
                 <HeroSlideItem
-                    bgImage={bg}
-                    title={["Experience.",<br/>,"Unique.",<br/>,"Adventures."]}
+                    bgImage={caveSpotlightImg}
+                    title={["Experience.",<br/>,"Unique.",<br/>,"Entertainment."]}
                     buttonLink={"#"}
                     buttonLinkText={"See Project"}
                 />
             </Carousel.Item>
-            <Carousel.Item>
-                <HeroSlideItem
-                    bgImage={bg}
-                    title={["Minimalistic",<br/>,"Architecture",<br/>,"and more"]}
-                    buttonLink={"#"}
-                    buttonLinkText={"See Project"}
-                />
-            </Carousel.Item>
+            {/*<Carousel.Item>*/}
+            {/*    <HeroSlideItem*/}
+            {/*        bgImage={bg2}*/}
+            {/*        title={["Minimalistic",<br/>,"Architecture",<br/>,"and more"]}*/}
+            {/*        buttonLink={"#"}*/}
+            {/*        buttonLinkText={"See Project"}*/}
+            {/*    />*/}
+            {/*</Carousel.Item>*/}
             {/*<Carousel.Item className="hero-slide-item set-bg"  style ={ { backgroundImage: "url("+bg+")" } }>*/}
             {/*    <div  className="slide-inner">*/}
             {/*        <div className="slide-content">*/}
@@ -41,12 +42,12 @@ const HeroSection = () => (
 
         </Carousel>
         <div className="slide-num-holder" id="snh-1"></div>
-        <div className="hero-right-text">Experience</div>
+        <div className="hero-right-text">Adventure</div>
     </section>
 );
 
 const HeroSlideItem = (props) => (
-    <div className="hero-slide-item set-bg" >
+    <div className="hero-slide-item set-bg"  style ={ { backgroundImage: "url("+props.bgImage+")" } }>
         <div className="slide-inner">
             <div className="slide-content">
                 <h2>{props.title}</h2>
