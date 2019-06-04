@@ -568,17 +568,22 @@ ol {
 }
 
 .left-bar .left-bar-content {
-	position: absolute;
+	/*position: absolute;*/
 	width: 100%;
 	bottom: 0;
 	text-align: center;
 	margin-bottom: 90px;
 }
 
+.social-links {
+	float: start;
+	margin-top: 250px;
+}
+
 .social-links a {
 	display: block;
 	color: #838383;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	font-size: 20px;
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
@@ -2093,6 +2098,7 @@ ol {
 	}
 	.footer-section .social-links a {
 		display: inline-block;
+		float:start;
 		padding: 0 15px;
 		margin-bottom: 0;
 	}

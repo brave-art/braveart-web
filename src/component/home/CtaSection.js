@@ -6,7 +6,7 @@ import lightIcon3 from "../../img/icon/light/3.png";
 
 const CtaSection = () => (
     <section className="cta-section pt100 pb50">
-        <div className="cta-image-box"></div>
+        <div className="cta-image-box"/>
         <div className="container">
             <div className="row">
                 <div className="col-lg-7 pl-lg-0 offset-lg-5 cta-content">

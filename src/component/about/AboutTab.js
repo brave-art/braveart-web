@@ -16,7 +16,7 @@ const AboutTab = () => (
             bgImage={HeaderImage}
         />
         <AboutIntro/>
-        <TestimonialsSection/>
+        {/*<TestimonialsSection/>*/}
         <TeamSection/>
         {/*<ServicesSection/>*/}
         {/*<ServicesWalkthroughSection/>*/}

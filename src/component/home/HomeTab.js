@@ -13,14 +13,13 @@ const HomeTab = () => (
 
     <div className="HomeTab">
 
-        {/*<Header/>*/}
         <HeroSection/>
         <HomeIntroSection/>
         <ServicesSection/>
         <CtaSection/>
-        <MilestonesSection/>
-        <ProjectsSection/>
-        <ClientsSection/>
+        {/*<MilestonesSection/>*/}
+        {/*<ProjectsSection/>*/}
+        {/*<ClientsSection/>*/}
         <Footer/>
 
     </div>

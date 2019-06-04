@@ -10,7 +10,7 @@ const ContactFormSection = () => (
         </div>
         <div className="row">
             <div className="col-lg-3 contact-info mb-5 mb-lg-0">
-                <p>Address: 1481 Creekside Lane Avila Beach, CA 93424 </p>
+                {/*<p>Address: 1481 Creekside Lane Avila Beach, CA 93424 </p>*/}
                 <p>Phone: (517)292-6061</p>
                 <p>Email: info@braveart.email</p>
                 <SocialLinks/>

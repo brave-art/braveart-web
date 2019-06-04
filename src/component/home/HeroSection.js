@@ -41,7 +41,7 @@ const HeroSection = () => (
 
         </Carousel>
         <div className="slide-num-holder" id="snh-1"></div>
-        <div className="hero-right-text">architecture</div>
+        <div className="hero-right-text">Experience</div>
     </section>
 );
 
