@@ -3,7 +3,9 @@ import React from 'react';
 import {Route,NavLink,HashRouter}
     from 'react-router-dom';
 
-import Tabs from 'react-bootstrap/Tabs';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Nav from 'react-bootstrap/Nav';
 
 import './App.css';
 import './css/bootstrap.min.css';
@@ -27,25 +29,43 @@ function App() {
       <HashRouter>
 
           <header className = "header-area">
-              <a className = "logo-area">
-                  <NavLink to ="/">
-                    <img src = {logo} alt = "Company Logo"/>
-                  </NavLink>
-              </a>
-              <div className="nav-switch">
-                  <i className="fa fa-bars"/>
-              </div>
-              <a href = "Tel:517-292-6061" className = "phone-number">(517)292-6061</a>
 
-              <nav className="nav-menu">
-                  <ul>
-                      <li><NavLink to="/">Home</NavLink></li>
-                      <li><NavLink to="/about">About us</NavLink></li>
-                      <li><NavLink to="/axe-throwing">Axe Throwing</NavLink></li>
-                      {/*<li><NavLink to="/portfolio">Portfolio</NavLink></li>*/}
-                      <li><NavLink to="/contact">Contact</NavLink></li>
-                  </ul>
-              </nav>
+              <Navbar fixed="top" sticky="top" expand={"lg"} bg={"dark"} variant={"dark"}>
+                  <Navbar.Brand href={"#"}>Brave Art Adventures</Navbar.Brand>
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                  <Navbar.Collapse id="responsive-navbar-nav">
+                      <Nav className={"mr-auto"} float={"right"}>
+                          <Nav.Link><NavLink to="/">Home</NavLink></Nav.Link>
+                          <Nav.Link><NavLink to="/about">About us</NavLink></Nav.Link>
+                          <NavDropdown title="Services" id="collasible-nav-dropdown">
+                              <NavDropdown.Item><NavLink to="/axe-throwing">Axe Throwing</NavLink></NavDropdown.Item>
+                              <NavDropdown.Item><NavLink to="/escape-rooms">Escape Rooms</NavLink></NavDropdown.Item>
+                              <NavDropdown.Divider />
+                          </NavDropdown>
+                          <Nav.Link><NavLink to="/contact">Contact</NavLink></Nav.Link>
+                      </Nav>
+                  </Navbar.Collapse>
+              </Navbar>
+
+              {/*<a className = "logo-area">*/}
+              {/*    <NavLink to ="/">*/}
+              {/*      <img src = {logo} alt = "Company Logo"/>*/}
+              {/*    </NavLink>*/}
+              {/*</a>*/}
+              {/*<div className="nav-switch">*/}
+              {/*    <i className="fa fa-bars"/>*/}
+              {/*</div>*/}
+              {/*<a href = "Tel:517-292-6061" className = "phone-number">(517)292-6061</a>*/}
+
+              {/*<nav className="nav-menu">*/}
+              {/*    <ul>*/}
+              {/*        <li><NavLink to="/">Home</NavLink></li>*/}
+              {/*        <li><NavLink to="/about">About us</NavLink></li>*/}
+              {/*        <li><NavLink to="/axe-throwing">Axe Throwing</NavLink></li>*/}
+              {/*        /!*<li><NavLink to="/portfolio">Portfolio</NavLink></li>*!/*/}
+              {/*        <li><NavLink to="/contact">Contact</NavLink></li>*/}
+              {/*    </ul>*/}
+              {/*</nav>*/}
           </header>
 
 
