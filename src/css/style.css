@@ -1155,7 +1155,7 @@ ol {
 
 .page-header-section .header-title span {
 	background: none;
-	color: var(--light-primary-color);
+	color: var(--accent-color);
 }
 
 /*----------------------------------------*/
@@ -1197,7 +1197,7 @@ ol {
 	z-index: 9;
 }
 
-.testimonials-section .qut {
+.qut {
 	color: var(--accent-color);
 	font-size: 36px;
 	margin-bottom: 20px;

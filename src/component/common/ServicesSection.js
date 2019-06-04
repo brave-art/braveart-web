@@ -3,9 +3,6 @@ import React from 'react';
 import crossedAxeIcon from "../../img/braveart/crossedLumberjackAxes/crossed-lumberjack-axes-icon-cut.png";
 import puzzleIcon from "../../img/braveart/puzzle Icon/puzzle-icon.svg";
 import questionMarkIcon from "../../img/braveart/puzzle Icon/question-mark-icon.svg";
-// import darkIcon4 from "../../img/icon/dark/4.png";
-import darkIcon5 from "../../img/icon/dark/5.png";
-import darkIcon6 from "../../img/icon/dark/6.png";
 
 const ServicesSection = (props) => (
 

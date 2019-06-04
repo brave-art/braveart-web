@@ -3,6 +3,7 @@ import React from 'react';
 import Header from "../common/Header";
 import HeaderImage from "../../img/header-bg.jpg";
 import ContactFormSection from "./ContactForm";
+import Footer from "../common/Footer";
 
 const ContactTab = () => (
 
@@ -13,6 +14,7 @@ const ContactTab = () => (
             bgImage={HeaderImage}
         />
         <ContactFormSection/>
+        <Footer/>
     </div>
 );
 

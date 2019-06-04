@@ -31,7 +31,7 @@ const ContactFormSection = () => (
             </div>
         </div>
     </div>
-    <div className="map-area" id="map-canvas"></div>
+    {/*<div className="map-area" id="map-canvas"></div>*/}
 </section>
 
 );

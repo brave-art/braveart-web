@@ -13,11 +13,11 @@ const Footer = () => (
                         <div className="col-md-4">
                             <div className="footer-item">
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><a href="#">Portfolio</a></li>
-                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#/">Home</a></li>
+                                    <li><a href="#/about">About us</a></li>
+                                    <li><a href="#/axe-throwing">Axe Throwing</a></li>
+                                    <li><a href="#/contact">Contact</a></li>
+                                    {/*<li><a href="#">Blog</a></li>*/}
                                 </ul>
                             </div>
                         </div>
