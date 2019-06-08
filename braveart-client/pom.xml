@@ -9,9 +9,9 @@
     </parent>
 
     <groupId>world.braveart.web</groupId>
-    <artifactId>web-client</artifactId>
+    <artifactId>braveart-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>web-client</name>
+    <name>braveart-client</name>
     <description>Contains client application code</description>
 
 
