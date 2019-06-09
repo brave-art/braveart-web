@@ -1,12 +1,10 @@
 package world.braveart.aws.forms.contact
 
 import org.apache.commons.io.IOUtils
-import org.junit.Test
 
-import org.junit.Assert.*
+import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import java.io.ByteArrayOutputStream
-import java.io.InputStream
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class PostContactLambdaServiceTest {
