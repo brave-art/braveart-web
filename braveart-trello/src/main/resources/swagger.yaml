@@ -3660,7 +3660,7 @@ paths:
         '200':
           description: Success
           schema:
-            $ref: '#/definitions/cards'
+            $ref: '#/definitions/cardResult'
         '400':
           description: Server rejection
       security:
@@ -13963,7 +13963,7 @@ definitions:
     properties:
       closed:
         description: ' true or false'
-        type: string
+        type: boolean
       desc:
         description: a string with a length from 0 to 16384
         type: string
@@ -13992,7 +13992,7 @@ definitions:
         description: 'A comma-separated list of objectIds, 24-character hex strings'
         type: string
       keepFromSource:
-        description: TrelloProperties of the card to copy over from the source.
+        description: TrelloProps of the card to copy over from the source.
         type: string
       labels:
         description: 'all or a comma-separated list of: blue, green, orange, purple, red or yellow'
@@ -14018,6 +14018,27 @@ definitions:
     type: object
     xml:
       name: card
+
+  cardResult:
+    properties:
+      id:
+        description: 'id of the card'
+        type: string
+      idBoard:
+        description: id of the board the card should be moved to
+        type: string
+      name:
+        description: 'The name of the new card.  It isn&#39;t required if the name is being copied from provided by a URL, file or card that is being copied.'
+        type: string
+      shortUrl:
+        description: 'short url to navigate to the card'
+        type: string
+      url:
+        description: 'full url to navigate to the card'
+        type: string
+    type: object
+    xml:
+      name: cardResult
   cards_actions_comments:
     properties:
       text:
