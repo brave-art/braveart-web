@@ -41,11 +41,18 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <artifactSet>
-                <excludes>
-                  <exclude>junit:junit</exclude>
-                </excludes>
-              </artifactSet>
+              <filters>
+                <filter>
+                  <artifact>world.braveart.web:braveart-trello</artifact>
+                  <includes>
+                    <include>world/braveart/**</include>
+                    <include>io/swagger/client/apis/CardApi*</include>
+                    <include>io/swagger/client/infrastructure/**</include>
+                    <include>io/swagger/client/models/Cards.class</include>
+                    <include>io/swagger/client/models/CardResult.class</include>
+                  </includes>
+                </filter>
+              </filters>
             </configuration>
           </execution>
         </executions>

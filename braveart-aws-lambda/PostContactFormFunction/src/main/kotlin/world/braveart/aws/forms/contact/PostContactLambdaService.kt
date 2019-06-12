@@ -1,14 +1,11 @@
 package world.braveart.aws.forms.contact
 
-//world.braveart.aws.forms.contact.PostContactLambdaService::handleRequest
-import com.amazonaws.services.lambda.runtime.Context
-import com.amazonaws.services.lambda.runtime.RequestHandler
+//world.braveart.aws.forms.contact.PostContactLambdaService::handler
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.github.kittinunf.result.Result
 import io.swagger.client.models.CardResult
-import io.swagger.client.models.Cards
 import kotlinx.coroutines.runBlocking
 import world.braveart.common.content.BraveArtColors
 import world.braveart.slack.customerservice.SlackCustomerServiceChannelMessaging
@@ -22,7 +19,6 @@ import java.io.InputStream
 import java.io.OutputStream
 import java.time.LocalDateTime
 import java.time.ZoneOffset
-//import kotlin.result as kotResult
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class ContactForm(
@@ -39,10 +35,7 @@ const val TRELLO_AXE_CUSTOMER_SERVICE_BOARD = "https://trello.com/b/5GCOL8tr/cus
 
 const val CONTACT_CHANNEL = "braveart.world/contact"
 
-object PostContactLambdaService : RequestHandler<ContactForm, Any> {
-    override fun handleRequest(p0: ContactForm?, p1: Context?): Any {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+class PostContactLambdaService  {
 
     private val mapper = jacksonObjectMapper()
 
@@ -69,8 +62,8 @@ object PostContactLambdaService : RequestHandler<ContactForm, Any> {
                             |${contact.contactEmail.take(250)}
                             |
                             |##Message
-                            |${contact.contactMessage.take(10000)} // actual limit was 16384 at some point in time
-                        """.trimMargin(),
+                            |${contact.contactMessage.take(10000)}
+                        """.trimMargin(), // actual limit was 16384 at some point in time
                             dueDate = ticketDateTime.toLocalDate(),
                             boardId = TrelloProps[TrelloProps.AxeCustomerServiceBoard.board_id],
                             listId = TrelloProps[TrelloProps.AxeCustomerServiceBoard.IncomingList.list_id]
@@ -124,10 +117,5 @@ object PostContactLambdaService : RequestHandler<ContactForm, Any> {
                     )
         }
 
-//        mapper.writeValue(output, HandlerOutput(
-//                """...Echo... Hello ${inputObj.contactName},
-//                    |We will contact you by email at: ${inputObj.contactEmail} in regards to your message:
-//                    |${inputObj.contactMessage}
-//                """.trimMargin()))
     }
 }

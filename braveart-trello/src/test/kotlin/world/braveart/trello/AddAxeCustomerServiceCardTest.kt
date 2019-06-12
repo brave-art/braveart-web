@@ -1,12 +1,9 @@
 package world.braveart.trello
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.fasterxml.jackson.module.kotlin.readValue
 import org.junit.jupiter.api.Test
 import world.braveart.trello.common.config.TrelloProps
 import java.time.LocalDate
 import kotlin.system.measureTimeMillis
-import kotlin.test.Ignore
 
 class AddAxeCustomerServiceCardTest {
 

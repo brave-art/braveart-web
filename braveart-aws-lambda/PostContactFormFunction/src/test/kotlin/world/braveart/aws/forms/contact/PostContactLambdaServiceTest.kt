@@ -1,8 +1,6 @@
 package world.braveart.aws.forms.contact
 
-import jdk.nashorn.internal.ir.annotations.Ignore
 import org.apache.commons.io.IOUtils
-
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import world.braveart.slack.customerservice.SlackProps
@@ -13,7 +11,6 @@ import kotlin.system.measureTimeMillis
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class PostContactLambdaServiceTest {
 
-//    val testService = PostContactLambdaService();
 
     private val encoding = "UTF-8"
 
@@ -22,7 +19,7 @@ class PostContactLambdaServiceTest {
 
         val out = ByteArrayOutputStream();
 
-        PostContactLambdaService.handler(input = IOUtils.toInputStream(
+        PostContactLambdaService().handler(input = IOUtils.toInputStream(
                 """{  "key1": "value1","key2": "value2","key3": "value3"}""",encoding),
                 output = out
         )
@@ -48,15 +45,15 @@ class PostContactLambdaServiceTest {
 
         val out = ByteArrayOutputStream();
 
-        repeat(5) {
+//        repeat(5) {
             val milliseconds = measureTimeMillis {
-                PostContactLambdaService.handler(input = IOUtils.toInputStream(
+                PostContactLambdaService().handler(input = IOUtils.toInputStream(
                         """{"contactName": "Grimly","contactEmail": "MyAxe@Mordor.MiddleEarth","contactMessage": "I had a BRILLIANT idea! I would like to propose that we rent your axe throwing lanes to train an army that can invade Mordor!"}""",
                         encoding),
                         output = out
                 )
-            }
-            println(milliseconds)
+//            }
+//            println(milliseconds)
         }
     }
 
