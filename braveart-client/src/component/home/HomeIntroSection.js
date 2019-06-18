@@ -11,10 +11,10 @@ const HomeIntroSection = () => (
                     <p>
                         {"Experience the next generation in entertainment. Brave Art Adventures works to bring the " +
                         "latest forms of entertainment to you. We have an adventure for you whether you are looking " +
-                        "to experience your next adventure, plan an event with entertainment or are a business looking to entertain your " +
-                        "customers and employees. Experience the adventure and book with Brave Art today!"}
+                        "plan an event or are a business looking to entertain your customers and employees." +
+                        "Experience the adventure and book with Brave Art today!"}
                     </p>
-                    <a href="#" className="site-btn sb-dark">Book Axe Throwing</a>
+                    <a href="/contact" className="site-btn sb-dark">Book Axe Throwing</a>
                 </div>
                 <div className="col-lg-5 pt-4">
                     <img src={intro} alt="intro pic"/>

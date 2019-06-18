@@ -1,13 +1,11 @@
 import React from 'react';
 
-import team1 from '../../img/team/1.jpg'
-import team2 from '../../img/team/2.jpg'
-import team3 from '../../img/team/3.jpg'
 
 import jenPic from '../../img/braveart/jen/JenVertical.jpg'
+import scottPic from '../../img/braveart/scott/scott-3.jpg'
 
 const TeamMember = (props) => (
-    <div className="col-lg-4 col-md-6">
+    <div className="col-lg-5 col-md-6">
         <div className="team-member">
             <img src={props.image} alt="Team photo"/>
             <div className="member-info">
@@ -22,7 +20,7 @@ const TeamSection = () => (
 <section class="team-section spad">
         <div class="container">
             <div class="section-title mb100">
-                <h1>The Team</h1>
+                <h1>Meet The Owners</h1>
             </div>
             <div class="row">
                 <TeamMember
@@ -31,15 +29,10 @@ const TeamSection = () => (
                     role={"Owner"}
                 />
                 <TeamMember
-                    image={team2}
-                    name={"Lili Jameson"}
-                    role={"Senior Architect"}
+                    image={scottPic}
+                    name={"Scott Latunski"}
+                    role={"Owner"}
                 />
-                {/*<TeamMember*/}
-                {/*    image={team3}*/}
-                {/*    name={"Michael Dow"}*/}
-                {/*    role={"Senior Architect"}*/}
-                {/*/>*/}
             </div>
         </div>
     </section>

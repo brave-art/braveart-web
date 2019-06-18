@@ -17,6 +17,7 @@ import world.braveart.trello.common.config.TrelloProps
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
 import java.io.OutputStream
+import java.net.URLEncoder
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 
@@ -45,7 +46,7 @@ class PostContactLambdaService  {
 
         val ticketDateTime = LocalDateTime.now()
 
-        val ticketName = "Contact-Request:$CONTACT_CHANNEL[$ticketDateTime]"
+        val ticketName = "Contact-Request: $CONTACT_CHANNEL [$ticketDateTime]"
 
 
         val trelloCardResult = Result.of<CardResult,Exception> {
@@ -82,19 +83,18 @@ class PostContactLambdaService  {
                                             color = BraveArtColors.DefaultPrimaryColor.color,
                                             pretext = "Customer has submitted a request for contact",
                                             author_name = "Name: ${contact.contactName.take(100)}",
-                                            author_link = """mailto:${contact.contactEmail}?subject=Brave Art Customer Service&body=Thank you for contacting Brave Art Adventures!
+                                            author_link = URLEncoder.encode("""mailto:${contact.contactEmail}?subject=Brave Art Customer Service&body=Thank you for contacting Brave Art Adventures!
                                                 |
                                                 |
                                                 |Original Message:
-                                                |"${contact.contactMessage.take(3000)}
-                                                |...
+                                                |"${contact.contactMessage.take(3000)}"
+                                                |${if (contact.contactMessage.length > 3000) "..." else ""}
                                                 |
                                                 |Customer Service
                                                 |Brave Art Adventures LLC
                                                 |customer.support@braveart.email
-                                                |(517) 292-6061
-                                                |"
-                                            """.trimMargin(),
+                                                |517-292-6061
+                                            """.trimMargin(),"UTF-8"),
 //                                            author_icon = "http://flickr.com/icons/bobby.jpg",
                                             title = "Trello Ticket: $ticketName",
                                             title_link = trelloCardResult.get().shortUrl ?: TRELLO_AXE_CUSTOMER_SERVICE_BOARD,

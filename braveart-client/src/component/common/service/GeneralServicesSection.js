@@ -17,21 +17,21 @@ const GeneralServicesSection = (props) => (
                 description = "Information on axe throwing leagues, rentals and events"
                 image = {crossedAxeIcon}
                 imageAlt = "Crossed Axes"
-                link = "#/axe-throwing"
+                link = "/axe-throwing"
             />,
             <ServiceCard
                 title = "Escape Rooms"
                 description = "Coming Soon!"
                 image = {puzzleIcon}
                 imageAlt = "Puzzle Icon."
-                link = "#/escape-room"
+                link = "/escape-room"
             />,
             <ServiceCard
                 title = "More?"
                 description = "Brave Art will be offering two new services in the near future. Follow us on social media or subscribe to our mailing list to be the first ot know!"
                 image = {questionMarkIcon}
                 imageAlt = "Question mark icon."
-                link = "#/news"
+                link = "/news"
             />]
         }
     />

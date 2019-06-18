@@ -1,7 +1,7 @@
 import React from 'react';
 
-// import bgImage from "../../img/bg.jpg";
 import promoImage from "../../img/braveart/adventure/lightbulb.jpg";
+// import promoImage from "../../img/braveart/wood-grain/wood-grain2.jpg";
 
 const PromoSection = (props) => (
 

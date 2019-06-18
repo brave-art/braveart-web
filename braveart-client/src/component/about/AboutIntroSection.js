@@ -1,6 +1,7 @@
 import React from 'react';
 
-import aboutImage from "../../img/about.jpg";
+import aboutImage from "../../img/braveart/family/family_bike.jpg";
+// import aboutImage from "../../img/about.jpg";
 
 const AboutIntro = () => (
 
@@ -8,19 +9,18 @@ const AboutIntro = () => (
     <div className="container">
         <div className="row">
             <div className="col-lg-8 intro-text">
-                <h1>We are a creative Architecture<span>Studio</span></h1>
+                <h1 >We are <span>Family</span>.</h1>
+                <h1>We love <span>Adventures</span>.</h1>
+                <h1>We create <span>Experiences</span>.</h1>
+
+
                 <div className="row">
                     <div className="col-md-6">
-                        <p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque
-                            sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris malesuada,
-                            accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis
-                            ligula. </p>
+                        <p>
+                        </p>
                     </div>
                     <div className="col-md-6">
-                        <p>Curabitur finibus dolor vel lectus pretium interdum a eget ante. Morbi rhoncus feugiat
-                            imperdiet. Curabitur non maximus leo. Nulla in ipsum sed magna egestas bibendum. Integer in
-                            sem sagittis, commodo mi sit amet, commodo nibh. Suspendisse potenti. Aliquam erat
-                            volutpat. </p>
+                        <p> </p>
                     </div>
                 </div>
             </div>

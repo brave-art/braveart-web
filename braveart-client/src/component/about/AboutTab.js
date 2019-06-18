@@ -2,9 +2,10 @@ import React from 'react';
 
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-import HeaderImage from "../../img/header-bg.jpg";
+// import HeaderImage from "../../img/header-bg.jpg";
+import HeaderImage from "../../img/braveart/wood-grain/wood-grain2.jpg";
 import AboutIntro from "./AboutIntroSection";
-import TestimonialsSection from "./TestimonialsSection";
+// import TestimonialsSection from "./TestimonialsSection";
 import TeamSection from "./TeamSection";
 
 const AboutTab = () => (

@@ -11,7 +11,7 @@ import HeaderImage from "../../img/braveart/axe/axe-in-field.jpg";
 
 
 import ServicesIntroSection from "./ServiceIntroSection";
-import ServicesWalkthroughSection from "./ServicesWalkthroughSection";
+// import ServicesWalkthroughSection from "./ServicesWalkthroughSection";
 import PromoSection from "../common/PromoSection";
 
 const AxeThrowingTab = () => (
@@ -28,11 +28,12 @@ const AxeThrowingTab = () => (
         <PromoSection
                 msgTitle={"Have questions or want to schedule an event?"}
                 msg={"Contact us and we will be happy to assist!"}
-                link={"#/contact"}
+                link={"/contact"}
         />
         <Footer/>
 
     </div>
 );
 
+export const AxeThrowingTabLink = "/axe-throwing";
 export default AxeThrowingTab;

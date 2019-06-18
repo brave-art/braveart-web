@@ -5,7 +5,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import SocialLinks from '../common/SocialLinks';
 
 import caveSpotlightImg from "../../img/braveart/adventure/cave-spotlight-adventure-shrunk.jpg";
-import bg2 from "../../img/bg.jpg";
+// import bg2 from "../../img/bg.jpg";
 
 const HeroSection = () => (
     <section className="hero-section">
@@ -19,8 +19,8 @@ const HeroSection = () => (
                 <HeroSlideItem
                     bgImage={caveSpotlightImg}
                     title={["Experience.",<br/>,"Unique.",<br/>,"Entertainment."]}
-                    buttonLink={"#"}
-                    buttonLinkText={"See Project"}
+                    buttonLink={"/contact"}
+                    buttonLinkText={"Book Now"}
                 />
             </Carousel.Item>
             {/*<Carousel.Item>*/}

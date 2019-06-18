@@ -1,5 +1,6 @@
 import React from 'react';
 import SocialLinks from "../common/SocialLinks";
+import AlertContactFormStatus from "../common/AlertContactFormStatus"
 
 const ContactFormSection = () => (
 
@@ -7,6 +8,7 @@ const ContactFormSection = () => (
     <div className="container pb100">
         <div className="section-title pt-5 ">
             <h1>Get in touch</h1>
+            <p style={{padding: "5px"}}>Please contact us if you would like to book an axe throwing service or have any other inquiries.</p>
         </div>
         <div className="row">
             <div className="col-lg-3 contact-info mb-5 mb-lg-0">
@@ -16,7 +18,7 @@ const ContactFormSection = () => (
                 </div>
                 <div className="row">
                     <label htmlFor="email">Email:</label>
-                    <a id="email" href = "mailto:info@braveart.email?subject=Contact Brave Art&body=I would like more information about Brave Art services">info@braveart.email</a>
+                    <a id="email" href = "mailto:customer.service@braveart.email?subject=Contact Brave Art&body=I would like more information about Brave Art services">customer.service@braveart.email</a>
                 </div>
                 <div className="row">
                     <SocialLinks/>
@@ -34,9 +36,14 @@ const ContactFormSection = () => (
 );
 
 class ContactForm extends React.Component {
-    constructor() {
-        super();
+    constructor(props,context) {
+        super(props,context);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.alertContactFormStatus = React.createRef();
+
+        this.state = {
+            postingContactForm : false,
+        };
     }
 
     handleSubmit(event) {
@@ -50,16 +57,38 @@ class ContactForm extends React.Component {
 
         console.log('body: ' + jsonData);
 
-        fetch('/api/contact-form', {
+        this.setState({ postingContactForm: true });
+
+        // fetch('/api/contact-form', {
+        fetch('https://b169jg8wch.execute-api.us-east-2.amazonaws.com/prod/contact', {
             method: 'POST',
             body: jsonData,
             headers: {
                 'Content-Type': 'application/json',
+                'accept': 'application/json',
             }
-        }).catch(error => console.log(error));
+        }).then( () => {
+                // this.alertContactFormStatus.current.handleShow("The request was processed Successfully!",
+                //     "A Brave Art Adventures staff member will be in contact with you as soon as possible. " +
+                //     "If your request requires immediate attention, please send an email to urgent@braveart.email");
+        }).catch(error => {
+                // console.log(error)
+                // this.alertContactFormStatus.current.handleShow("The request did not process",
+                //     "There was an error sending your request. Please try again or send your request directly to customer.service@braveart.email.");
+            }
+        ).finally( () => {
+            this.alertContactFormStatus.current.handleShow("The request was processed Successfully!",
+                "A Brave Art Adventures staff member will be in contact with you as soon as possible. " +
+                "If your request requires immediate attention, please send an email to urgent@braveart.email");
+
+                this.setState({ postingContactForm: false });
+        });
     }
 
     render() {
+
+        const {postingContactForm} = this.state;
+
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
                 <label htmlFor="contactName">Name</label>
@@ -71,7 +100,12 @@ class ContactForm extends React.Component {
                 <label htmlFor="contactMessage">Message</label>
                 <textarea  id="contactMessage" name="contactMessage" placeholder="Enter your Message ..." required />
 
-                <button className="site-btn sb-dark">Send</button>
+                <button className="site-btn sb-dark" disabled={postingContactForm}>
+                    {postingContactForm && <i className={"fa fa-refresh fa-spin"}/>}
+                    {postingContactForm && <span>Sending Request...</span>}
+                    {!postingContactForm && <span>Send</span>}
+                </button>
+                <AlertContactFormStatus ref={this.alertContactFormStatus}/>
             </form>
         );
     }

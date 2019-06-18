@@ -48,9 +48,32 @@ h4,
 h5,
 h6 {
 	color: var(--primary-text-color);
-	margin: 0;
-	margin-bottom: 10px;
+	margin: 0 0 10px;
 	font-weight: 700;
+}
+
+.navBar * {
+	background-color: var(--dark-primary-color);
+	color: var(--text-primary-color);
+	font-family: Hebo, sans-serif;
+	padding-left:10px;
+	padding-right:10px;
+
+
+
+
+
+	/*font-family: Josefin Sans, sans-serif;*/
+}
+
+
+
+.navLinks {
+	padding: 8px;
+}
+
+.navLinks:hover {
+	color: var(--accent-color);
 }
 
 h1 {
@@ -63,6 +86,11 @@ h1 span {
 	padding: 0 10px;
 	color: var(--primary-text-color);
 	display: inline-block;
+}
+
+.servicesListingIntro li {
+	padding: 2px;
+	color: var(--secondary-text-color);
 }
 
 h2 {
@@ -114,9 +142,31 @@ ol {
 	color: var(--text-primary-color)
 }
 
+.fa-spin {
+	color: var(--accent-color);
+	padding: 5px;
+}
+
+
 .fa:hover {
 	color: var(--accent-color)
 }
+
+
+.site-btn:hover {
+	background: var(--accent-color)
+}
+
+.site-btn:disabled {
+	background: var(--secondary-text-color);
+	color: var(--text-primary-color);
+}
+
+.site-btn:disabled:hover {
+	color: red;
+}
+
+
 
 
 .sp-title {
@@ -340,6 +390,14 @@ ol {
 	cursor: pointer;
 }
 
+a {
+	color:  var(--default-primary-color);
+}
+
+a:hover {
+	color:  var(--dark-primary-color);
+}
+
 .accordion-area .panel-body p {
 	font-size: 14px;
 	margin-bottom: 0;
@@ -557,13 +615,14 @@ ol {
 	height: 960px;
 	background: #ededed;
 	position: relative;
+
 }
 
 .left-bar {
 	position: absolute;
 	width: 100px;
 	height: 100%;
-	background: var(--dark-primary-color);
+	background: var(--divider-color);
 	z-index: 20;
 }
 
@@ -1232,7 +1291,9 @@ ol {
 }
 
 .team-member img {
-	min-width: 100%;
+	/*min-width: 100%;*/
+
+
 }
 
 .team-member .member-info {
