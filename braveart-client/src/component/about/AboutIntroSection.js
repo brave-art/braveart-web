@@ -25,7 +25,7 @@ const AboutIntro = () => (
                 </div>
             </div>
             <div className="col-lg-4 pt-4">
-                <img src={aboutImage} alt="picture of team"/>
+                <img src={aboutImage} alt="Family before bike ride"/>
             </div>
         </div>
     </div>

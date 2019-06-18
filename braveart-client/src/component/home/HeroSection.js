@@ -5,7 +5,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import SocialLinks from '../common/SocialLinks';
 
 import caveSpotlightImg from "../../img/braveart/adventure/cave-spotlight-adventure-shrunk.jpg";
-// import bg2 from "../../img/bg.jpg";
 
 const HeroSection = () => (
     <section className="hero-section">

@@ -13,7 +13,7 @@ const ServicesIntroSection = () => (
                 <div className="col-lg-5">
                     <Carousel className="service-slider">
                         <Carousel.Item className="ss-single">
-                            <img src={service1} alt="service image 1"/>
+                            <img src={service1} alt="axe throwing lanes"/>
                         </Carousel.Item>
                         {/*<Carousel.Item className="ss-single">*/}
                         {/*    <img src={service2} alt="Service Image 2"/>*/}
