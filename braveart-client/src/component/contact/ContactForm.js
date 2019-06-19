@@ -60,7 +60,7 @@ class ContactForm extends React.Component {
         this.setState({ postingContactForm: true });
 
         // fetch('/api/contact-form', {
-        fetch('https://b169jg8wch.execute-api.us-east-2.amazonaws.com/prod/contact', {
+        fetch('https://api.braveart.world/contact', {
             method: 'POST',
             body: jsonData,
             headers: {
