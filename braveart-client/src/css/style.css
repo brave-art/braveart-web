@@ -66,7 +66,21 @@ h6 {
 	/*font-family: Josefin Sans, sans-serif;*/
 }
 
+.contactSection p {
+	padding-top: 15px;
+	color: var(--primary-text-color);
+	font-size: 22px;
 
+}
+
+.contact-info {
+	padding-top: 40px;
+	/*background-color: var(--divider-color:);*/
+}
+
+.contact-info label{
+	/*style */
+}
 
 .navLinks {
 	padding: 8px;
@@ -88,7 +102,10 @@ h1 span {
 	display: inline-block;
 }
 
-.servicesListingIntro li {
+.servicesListingIntro li,
+
+.servicesListingIntro h2
+{
 	padding: 2px;
 	color: var(--secondary-text-color);
 }
@@ -673,8 +690,8 @@ a:hover {
 	width: 100%;
 	height: 960px;
 	display: table;
-	background:var(--default-primary-color);
 	/*background-repeat: no-repeat;*/
+	background: no-repeat center top;
 }
 
 .hero-slider .hero-slide-item .slide-inner {
@@ -1209,13 +1226,17 @@ a:hover {
 /*  Other pages CSS
 /*----------------------------------------*/
 .page-header-section {
-	height: 445px;
+	height: 960px;
 	padding-top: 200px;
+	background: no-repeat center top;
+	width: 100%;
+	/*background-size: 1200px;*/
 }
 
 .page-header-section .header-title {
 	font-size: 82px;
 	color: var(--text-primary-color);
+	padding-top: 20px;
 }
 
 .page-header-section .header-title span {
@@ -2048,7 +2069,7 @@ a:hover {
 @media only screen and (max-width: 767px) {
 	h1,
 	.sp-title {
-		font-size: 45px;
+		font-size: 42px;
 	}
 /*	.page-header-section .header-title {*/
 /*		font-size: 55px;*/
@@ -2194,7 +2215,19 @@ a:hover {
 
 /*!* small mobile :320px. *!*/
 @media only screen and (max-width: 479px) {
-/*	.logo-area {*/
+
+	.hero-section {
+		height: 960px;
+		background: #ededed;
+		position: relative;
+
+	}
+
+	.page-header-section .header-title {
+		font-size: 70px;
+	}
+
+	/*	.logo-area {*/
 /*		padding: 20px 30px 30px;*/
 /*	}*/
 /*	.header-area {*/
@@ -2207,7 +2240,9 @@ a:hover {
 /*		margin-top: 0;*/
 /*		border-top: 2px solid;*/
 /*	}*/
-	.left-bar {
+	.left-bar,
+	.slide-num-holder
+	{
 		display: none;
 	}
 /*	.hero-slider .owl-nav {*/

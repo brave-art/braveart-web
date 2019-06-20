@@ -1,32 +1,31 @@
 import React from 'react';
-import SocialLinks from "../common/SocialLinks";
 import AlertContactFormStatus from "../common/AlertContactFormStatus"
 
 const ContactFormSection = () => (
 
 <section className="page-section pt100">
     <div className="container pb100">
-        <div className="section-title pt-5 ">
+        <div className="contactSection section-title pt-5 row">
             <h1>Get in touch</h1>
-            <p style={{padding: "5px"}}>Please contact us if you would like to book an axe throwing service or have any other inquiries.</p>
+            <p>Please contact us if you would like to book an axe throwing service or have any other inquiries.</p>
         </div>
         <div className="row">
-            <div className="col-lg-3 contact-info mb-5 mb-lg-0">
+            <div className="col-lg-8">
+                <ContactForm/>
+            </div>
+
+            <div className="col-lg-4 contact-info mb-5 mb-lg-0">
                 <div className="row">
-                    <label htmlFor="phoneNumber">Phone:</label>
+                    <label htmlFor="phoneNumber"><h4>Phone:&nbsp;&nbsp;</h4></label>
                     <a id="phoneNumber" href = "Tel:517-292-6061">517-292-6061</a>
                 </div>
                 <div className="row">
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email"><h4>Email:&nbsp;&nbsp;</h4></label>
                     <a id="email" href = "mailto:customer.service@braveart.email?subject=Contact Brave Art&body=I would like more information about Brave Art services">customer.service@braveart.email</a>
                 </div>
-                <div className="row">
-                    <SocialLinks/>
-                </div>
-
-            </div>
-            <div className="col-lg-9">
-                <ContactForm/>
+                {/*<div className="row">*/}
+                {/*    <SocialLinks/>*/}
+                {/*</div>*/}
             </div>
         </div>
     </div>
@@ -75,8 +74,7 @@ class ContactForm extends React.Component {
                 // console.log(error)
                 // this.alertContactFormStatus.current.handleShow("The request did not process",
                 //     "There was an error sending your request. Please try again or send your request directly to customer.service@braveart.email.");
-            }
-        ).finally( () => {
+        }).finally( () => {
             this.alertContactFormStatus.current.handleShow("The request was processed Successfully!",
                 "A Brave Art Adventures staff member will be in contact with you as soon as possible. " +
                 "If your request requires immediate attention, please send an email to urgent@braveart.email");

@@ -20,6 +20,7 @@ import AxeThrowingTab from "./component/axe-throwing/AxeThrowingTab";
 
 
 import ContactTab from "./component/contact/ContactTab";
+import EscapeRoomComingSoon from "./component/escape-room/EscapeRoomComingSoon";
 // import logo from "./img/braveart/Brave Art Axe Logo.png";
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
           <Route path="/axe-throwing" component={AxeThrowingTab}/>
           <Route path="/contact" component={ContactTab}/>
           <Route path="/about" component={AboutTab}/>
+          <Route path="/escape-room" component={EscapeRoomComingSoon}/>
       </BrowserRouter>
   );
 }

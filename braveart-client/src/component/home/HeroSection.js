@@ -4,7 +4,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import SocialLinks from '../common/SocialLinks';
 
-import caveSpotlightImg from "../../img/braveart/adventure/cave-spotlight-adventure-shrunk.jpg";
+import caveSpotlightImg from "../../img/braveart/adventure/cave_spotlight_adventure2.jpg";
+// import bg2 from "../../img/bg.jpg";
 
 const HeroSection = () => (
     <section className="hero-section">
@@ -40,13 +41,15 @@ const HeroSection = () => (
             {/*</Carousel.Item>*/}
 
         </Carousel>
-        <div className="slide-num-holder" id="snh-1"></div>
+        {/*<div className="slide-num-holder" id="snh-1"/>*/}
         <div className="hero-right-text">Adventure</div>
     </section>
 );
-
+//style ={ { backgroundImage: "url("+props.bgImage+")" }}
 const HeroSlideItem = (props) => (
-    <div className="hero-slide-item set-bg"  style ={ { backgroundImage: "url("+props.bgImage+")" } }>
+    <div className="hero-slide-item set-bg"  style ={ { backgroundImage: "url("+props.bgImage+")" }}>
+        {/*<img className="hero-slide-item set-bg" src={props.bgImage} alt={"cave spotlight"}*/}
+        {/*    style={{display: "inline-block"}}/>*/}
         <div className="slide-inner">
             <div className="slide-content">
                 <h2>{props.title}</h2>

@@ -4,7 +4,7 @@ import Header from "../common/Header";
 import AxeThrowingServicesSection from "./AxeThrowingServicesSection";
 import Footer from "../common/Footer";
 // import HeaderImage from "../../img/header-bg.jpg";
-import HeaderImage from "../../img/braveart/axe/axe-in-field.jpg";
+import HeaderImage from "../../img/braveart/axe/axe-in-field-shrunk.jpg";
 // import HeaderImage from "../../img/braveart/jen/jen.jpg";
 // import HeaderImage from "../../img/braveart/axe/JenAxePic.JPG";
 
